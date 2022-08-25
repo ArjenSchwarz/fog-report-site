@@ -1,0 +1,36 @@
+---
+baseurl: "https://demo-reports.ig.nore.me/"
+title: "Fog Reports"
+preserveTaxonomyNames: true
+LanguageCode: en
+theme: mixedpaper
+permalinks:
+  reports: /reports/:slug/:filename
+params:
+  mainSections: [reports]
+taxonomies:
+  region: region
+  stack: stack
+  account: account
+MetaDataFormat: yaml
+pygmentsCodeFences: true
+pygmentsStyle: native
+Paginate: 20
+menu:
+  main:
+      - Name: "Regions"
+        Identifier: "regions"
+        Url: "/region/"
+        Weight: 2
+      - Name: "Accounts"
+        Identifier: "accounts"
+        Url: "/account/"
+        Weight: 3
+      - Name: "Stacks"
+        Identifier: "stacks"
+        Url: "/stack/"
+        Weight: 4
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
